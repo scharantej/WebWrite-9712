@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flask + Bootstrap Form</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1>Flask + Bootstrap Form</h1>
+<form method="POST" action="/">
+<div class="form-group">
+<label for="num1">Number 1:</label>
+<input type="text" class="form-control" name="num1" id="num1" placeholder="Enter Number 1">
+</div>
+<div class="form-group">
+<label for="num2">Number 2:</label>
+<input type="text" class="form-control" name="num2" id="num2" placeholder="Enter Number 2">
+</div>
+<button type="submit" class="btn btn-primary">Add</button>
+</form>
+{% if result %}
+<div class="alert alert-success">
+The sum of the two numbers is: {{ result }}
+</div>
+{% endif %}
+</div>
+</body>
+</html>
+
